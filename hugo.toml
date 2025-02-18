@@ -1,0 +1,4 @@
+baseURL = 'https://ham-net.cz/'
+languageCode = 'cz-cs'
+title = 'Ham-net'
+disableKinds = ["taxonomy"]
