@@ -12,7 +12,7 @@ Nastaveni pro radia. Frekvence.
 ### Mikrotik nastaveni
  - /interface wireless
    - set wlan1 scan-list=2300-2400
-   - frequenct mode = superchannel
+   - frequency mode = superchannel
    - country code = no_country_set
 
 ### Links
