@@ -29,6 +29,17 @@ Nastaveni pro radia. Frekvence.
    - frequency mode = superchannel
    - country code = no_country_set
 
+
+### UBNT nastaveni
+Radio je potreba prepnout do "Licensed" nebo "Compilance test" modu. Country code je 511. Moznosti je vice.
+ - factory reset
+   - vyber compilance test/licensed v uvodnim pruvodci
+
+ - jiz nastavene radio
+   - zaloha konfigurace pres web
+   - editace cfg souboru, zde jsou dve polozky countrycode, ty prepsat na 511
+   - obnova konfigurace pres web
+
 ### Links
  - [Band plan UHF](https://www.iaru-r1.org/wp-content/uploads/2021/03/UHF-Bandplan.pdf)
  - [Band plan SHF](https://www.iaru-r1.org/wp-content/uploads/2020/12/SHF-Bandplan.pdf)
