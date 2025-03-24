@@ -14,8 +14,8 @@ Obsah pro Hamnet v cesku
 
 
 ### Technické info
-Síť HAMNET pracuje v přiděleném IP rozsahu 44.128/10, každý nód má potom přidělený rozsah /27 (tedy 30 IP adres) pro vlastní síť který je rozdělený na dva /28 rozsahy (14 IP adres každý), za účelem jeden může být "soukromý" a druhý "veřejný", na segregaci provozu potom stačí jediné pravidlo ve firewallu. 
-Páteřní linky (tj. mezi nódy) jsou v rozsahu /29 (6 IP adres, 2 pro routery na každé straně linky + 2 rádia)
+Síť HAMNET pracuje v přiděleném IP rozsahu 44.128.0.0/10 (255.192.0.0), každý nód má potom přidělený rozsah /27 (255.255.255.224) (tedy 30 IP adres) pro vlastní síť který je rozdělený na dva /28 (255.255.255.240) rozsahy (14 IP adres každý), za účelem jeden může být "soukromý" a druhý "veřejný", na segregaci provozu potom stačí jediné pravidlo ve firewallu.
+Páteřní linky (tj. mezi nódy) jsou v rozsahu /29 (255.255.255.248) (6 IP adres, 2 pro routery na každé straně linky + 2 rádia)
 Každý nód potřebuje minimálně dvě komponenty, router a rádio pro propojení s dalším nódem. Na místě routerů používáme výrobky od firmy Mikrotik, jelikož i ty nejlevnější modely disponují všemi potřebnými funkcemi které provoz HAMNETu vyžaduje (z těch pokročilejších např. BGP). Kdo chce a má ty zkušenosti, může použít i jiné řešení routeru (opnSense, openWRT).
 
 Rádia lze použít prakticky jakákoliv která podporují provoz minimálně 10MHz šířky na pásmu 5.65-5.85GHz (pouze ve rozsazích vyhrazených pro provoz neobsluhovaných stanic), podmínka je že na spoji mezi dvěma nódy musí být stejná rádia, nebo alespoň od stejného výrobce a stejné řady. Opět, v praxi se využívají hlavně rádia fy. Mikrotik a Ubiquiti.
