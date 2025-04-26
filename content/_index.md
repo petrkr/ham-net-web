@@ -40,6 +40,15 @@ Radio je potreba prepnout do "Licensed" nebo "Compilance test" modu. Country cod
    - editace cfg souboru, zde jsou dve polozky countrycode, ty prepsat na 511
    - obnova konfigurace pres web
 
+- Scan list
+  - 5GHz
+    - 5MHz sirka kanalu
+      - Legacy firmware: `145, 146, 147, 148, 149, 150, 151, 154, 155, 156, 157`
+    - 10MHz sirka kanalu
+      - Legacy firmware: `145, 147, 149, 151, 154, 156`
+    - 20MHz sirka
+      - Legacy firmware: `146, 150, 155`
+
 ### Links
  - [Band plan UHF](https://www.iaru-r1.org/wp-content/uploads/2021/03/UHF-Bandplan.pdf)
  - [Band plan SHF](https://www.iaru-r1.org/wp-content/uploads/2020/12/SHF-Bandplan.pdf)
