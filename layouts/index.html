@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} - Czech HAM-NET</title>
+    <meta name="description" content="HAM-NET síť v České republice - vysokorychlostní amatérská multimediální síť">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <nav>
-    </nav>
-    <main>
+    <header>
         <h1>{{ .Title }}</h1>
+        <div class="subtitle">Vysokorychlostní amatérská multimediální síť v České republice</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#co-to-je">Co to je?</a></li>
+            <li><a href="#technické-info">Technické info</a></li>
+            <li><a href="#mikrotik-nastaveni">MikroTik</a></li>
+            <li><a href="#ubnt-nastaveni">UBNT</a></li>
+            <li><a href="#links">Odkazy</a></li>
+        </ul>
+    </nav>
+    
+    <main>
         {{ .Content }}
     </main>
+    
     <footer>
+        <p>&copy; 2025 HAM-NET.cz</p>
     </footer>
 </body>
 </html>
