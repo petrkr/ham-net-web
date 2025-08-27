@@ -130,16 +130,51 @@ p {
 }
 
 /* Code Blocks */
+.code-block-wrapper {
+  position: relative;
+  margin: 1rem 0;
+}
+
 pre {
   background-color: var(--code-bg);
   color: #f8f8f2;
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
-  margin: 1rem 0;
+  margin: 0;
   border-left: 4px solid var(--ham-orange);
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--ham-orange);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  z-index: 1;
+}
+
+.copy-code-btn:hover {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.copy-code-btn.copy-success {
+  background-color: var(--ham-green);
+}
+
+.copy-code-btn.copy-error {
+  background-color: var(--ham-red);
 }
 
 code {
