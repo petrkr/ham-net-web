@@ -36,6 +36,7 @@ Nastaveni pro radia. Frekvence.
 - je potreba zmenit router ID, davam vlastne IP routeru
 - pro ROS 7 je zde filter pravidlo, ktere zaruci, ze se do Hamnetu nebude routovat nejaky pripadny lokalni rozsah, ktery muze byt pouzit pro administraci routeru z LAN site
 - interface je potreba taky upravit dle skutecnosti, v aktualnim pripade wireguard je p2p spoj a ether2 a 3 jsou hamnet site, jedna je user druha service. Zde nepridavejte lokalni management interface
+- pri pouziti Wireguard VPN, nezapomenout povolit 224.0.0.0/24 rozsah
 
 
 /routing id
