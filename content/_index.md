@@ -23,11 +23,16 @@ Rádia lze použít prakticky jakákoliv která podporují provoz minimálně 10
 Nastaveni pro radia. Frekvence.
 
 
-### Mikrotik nastaveni
- - /interface wireless
-   - set wlan1 scan-list=2300-2400
-   - frequency mode = superchannel
-   - country code = no_country_set
+## Mikrotik nastaveni
+
+### Wireless
+
+```shell
+/interface wireless
+  set wlan1 scan-list=2300-2400
+  frequency mode = superchannel
+  country code = no_country_set
+```
 
 ### Routing
 
