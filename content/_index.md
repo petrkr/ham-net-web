@@ -68,6 +68,21 @@ TBD
 
 ### VPN
 
+#### Wireguard client
+
+```shell
+# Add interface
+/interface wireguard
+add listen-port=13231 mtu=1420 name=wg-CALLSIGN
+
+# Add remote peer
+/interface wireguard peers
+add allowed-address=44.128.0.0/10,224.0.0.0/24 endpoint-address=REMOTE-HAMNET endpoint-port=1234 interface=wg-CALLSIGN name=\
+"Hamnet CALLSIGN" persistent-keepalive=25s
+
+# Assign P2P IP address
+/ip address add address=YOUR_IP/30 interface=wg-CALLSIGN
+```
 
 ### UBNT nastaveni
 Radio je potreba prepnout do "Licensed" nebo "Compilance test" modu. Country code je 511. Moznosti je vice.
