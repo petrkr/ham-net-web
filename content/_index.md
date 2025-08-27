@@ -43,7 +43,7 @@ Nastaveni pro radia. Frekvence.
 - interface je potreba taky upravit dle skutecnosti, v aktualnim pripade wireguard je p2p spoj a ether2 a 3 jsou hamnet site, jedna je user druha service. Zde nepridavejte lokalni management interface
 - pri pouziti Wireguard VPN, nezapomenout povolit 224.0.0.0/24 rozsah
 
-
+```shell
 /routing id
 add disabled=no id=44.146.2.193 name=id-1 select-dynamic-id=only-vrf select-from-vrf=main
 
@@ -61,6 +61,12 @@ add chain=hamnet disabled=no rule="if (dst in 44.128.0.0/10) {accept}"
 /routing ospf interface-template
 add area=backbone disabled=no interfaces=wireguard1 type=ptp
 add area=lan.area disabled=no interfaces=ether2,ether3
+```
+
+#### BGP
+TBD
+
+### VPN
 
 
 ### UBNT nastaveni
