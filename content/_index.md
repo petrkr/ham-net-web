@@ -29,6 +29,33 @@ Nastaveni pro radia. Frekvence.
    - frequency mode = superchannel
    - country code = no_country_set
 
+### Routing
+
+#### OSPFv2
+
+- je potreba zmenit router ID, davam vlastne IP routeru
+- pro ROS 7 je zde filter pravidlo, ktere zaruci, ze se do Hamnetu nebude routovat nejaky pripadny lokalni rozsah, ktery muze byt pouzit pro administraci routeru z LAN site
+- interface je potreba taky upravit dle skutecnosti, v aktualnim pripade wireguard je p2p spoj a ether2 a 3 jsou hamnet site, jedna je user druha service. Zde nepridavejte lokalni management interface
+
+
+/routing id
+add disabled=no id=44.146.2.193 name=id-1 select-dynamic-id=only-vrf select-from-vrf=main
+
+/routing ospf instance
+add disabled=no in-filter-chain=hamnet name=ospf1 out-filter-chain=hamnet redistribute=connected router-id=44.146.2.193
+
+/routing ospf area
+add disabled=no instance=ospf1 name=backbone
+add area-id=0.0.1.0 disabled=no instance=ospf1 name=lan.area
+
+/routing filter rule
+add chain=hamnet disabled=no rule="if ( dst-len == 32 ) { reject }"
+add chain=hamnet disabled=no rule="if (dst in 44.128.0.0/10) {accept}"
+
+/routing ospf interface-template
+add area=backbone disabled=no interfaces=wireguard1 type=ptp
+add area=lan.area disabled=no interfaces=ether2,ether3
+
 
 ### UBNT nastaveni
 Radio je potreba prepnout do "Licensed" nebo "Compilance test" modu. Country code je 511. Moznosti je vice.
