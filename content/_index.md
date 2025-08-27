@@ -2,9 +2,10 @@
 title: 'Ham-net'
 ---
 
-# ... Czech webpage for Hamnet
+## ... Czech webpage for Hamnet
 
 Obsah pro Hamnet v cesku
+
 ## Co to je?
  HAMNET (zkr. Highspeed Amateur Multimedia NETwork) je pomyslným nástupcem sítě Packet Rádio, založený na technologií TCP/IP a Wifi (802.11n/a/ac) na pásmech 13 a 6cm, dovolující o několik řádů vyšší přenosové rychlosti.
 
